@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Container, Tabs, Tab, Box ,Typography} from "@mui/material";
 import Invited from "./Invited/Invited";
 import Accepted from "./Accepted/Accepted";
-import '../styles/Home.css'
+import './Home.css';
 
 function Home() {
     const [value, setValue] = React.useState(0);

@@ -7,9 +7,6 @@ function App() {
     <Router>
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/leads" element={<Leads />} />
-      <Route path="/settings" element={<Settings />} />
-      <Route path="*" element={<NotFound />} /> Página 404 */}
     </Routes>
   </Router>
   );

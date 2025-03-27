@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# 🚀 React + Vite + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação React criada com Vite e TypeScript.
 
-Currently, two official plugins are available:
+## 📌 Requisitos
+Antes de começar, certifique-se de ter instalado:
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Instalação
+1. Clone o repositório:
+   ```sh
+     git clone https://github.com/CristianFnds/LeadManager.SPA.git
+   ```
+2. Acesse o diretório do projeto:
+   ```sh
+   cd LeadManager
+   ```
+3. Instale as dependências:
+   ```sh
+   npm install
+   ```
+   ou
+   ```sh
+   yarn install
+   ```
 
-## Expanding the ESLint configuration
+## ▶️ Executando o Projeto
+Para iniciar o servidor de desenvolvimento, execute:
+```sh
+npm run dev
+```
+Ou com Yarn:
+```sh
+yarn dev
+```
+O projeto será iniciado em `http://localhost:5173/`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🔧 Configuração do `.env`
+O projeto utiliza variáveis de ambiente configuradas em um arquivo `.env` localizado na raiz do projeto. Certifique-se de criar um arquivo `.env` com o seguinte conteúdo:
+```sh
+VITE_API_URL=http://localhost:5264/Leads
+```
+Para acessar as variáveis dentro do código, utilize:
+```ts
+const apiUrl = import.meta.env.VITE_API_URL;
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🔨 Build para Produção
+Para gerar uma versão otimizada para produção, execute:
+```sh
+npm run build
 ```
+Os arquivos gerados estarão na pasta `dist/`.
+
+## 🛠 Tecnologias Utilizadas
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
+- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+
+## 📝 Licença
+Este projeto está sob a licença MIT. Sinta-se livre para usá-lo e modificá-lo!
+

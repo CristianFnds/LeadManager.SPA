@@ -14,7 +14,7 @@ Antes de começar, certifique-se de ter instalado:
    ```
 2. Acesse o diretório do projeto:
    ```sh
-   cd LeadManager
+   cd LeadManager.SPA
    ```
 3. Instale as dependências:
    ```sh
@@ -37,7 +37,7 @@ yarn dev
 O projeto será iniciado em `http://localhost:5173/`.
 
 ## 🔧 Configuração do `.env`
-O projeto utiliza variáveis de ambiente configuradas em um arquivo `.env` localizado na raiz do projeto. Certifique-se de criar um arquivo `.env` com o seguinte conteúdo:
+O projeto utiliza variáveis de ambiente configuradas em um arquivo `.env` localizado dentro da pasta src. Certifique-se de modificar o arquivo `.env` para a url correta:
 ```sh
 VITE_API_URL=http://localhost:5264/Leads
 ```
